@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ShapeColorFillActivity">
+
+    <RelativeLayout
+        android:id="@+id/toolbar1"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/color_yellow"
+        android:elevation="10dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/hide_bars1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/image_close_drawing1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_close_black_24dp"
+            app:fabSize="mini" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_send_drawing1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:src="@drawable/save_image"
+            app:fabSize="mini" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/lexend_extrabold"
+            android:text="Shape Your Idea"
+            android:textColor="#E41111"
+            android:textSize="20sp" />
+
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/hide_bars1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@drawable/bookmark"
+        app:fabSize="auto"
+        app:layout_constraintLeft_toRightOf="@id/toolbar1"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.example.drawandpaint.widget.DrawMatrix
+        android:id="@+id/draw_view2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/color_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbar1" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/draw_tools1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="@color/color_white"
+        android:elevation="4dp"
+        android:translationY="80dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/image_shape"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:foreground="?selectableItemBackground"
+            android:padding="16dp"
+            android:src="@drawable/shapes"
+            app:layout_constraintEnd_toStartOf="@id/image_stroke1"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_stroke1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:foreground="?selectableItemBackground"
+            android:padding="16dp"
+            android:src="@drawable/colorpencils"
+            app:layout_constraintEnd_toStartOf="@id/image_draw_color1"
+            app:layout_constraintStart_toEndOf="@id/image_shape"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_draw_color1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:foreground="?selectableItemBackground"
+            android:padding="16dp"
+            android:src="@drawable/color_peaker"
+            app:layout_constraintEnd_toStartOf="@id/image_draw_opacity1"
+            app:layout_constraintStart_toEndOf="@id/image_stroke1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_draw_opacity1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:foreground="?selectableItemBackground"
+            android:padding="16dp"
+            android:src="@drawable/opacity"
+            app:layout_constraintEnd_toStartOf="@id/image_draw_undo1"
+            app:layout_constraintStart_toEndOf="@id/image_draw_color1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_draw_undo1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:foreground="?selectableItemBackground"
+            android:padding="16dp"
+            android:src="@drawable/undo"
+            app:layout_constraintEnd_toStartOf="@id/image_draw_redo1"
+            app:layout_constraintStart_toEndOf="@id/image_draw_opacity1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/image_draw_redo1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:foreground="?selectableItemBackground"
+            android:padding="16dp"
+            android:src="@drawable/redo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/image_draw_undo1"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/seekBar_width1"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:progress="8"
+            app:layout_constraintEnd_toStartOf="@+id/circle_view_width1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_shape" />
+
+        <com.example.drawandpaint.widget.CircleView
+            android:id="@+id/circle_view_width1"
+            android:layout_width="56dp"
+            android:layout_height="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_shape" />
+
+        <SeekBar
+            android:id="@+id/seekBar_opacity1"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:progress="100"
+            app:layout_constraintEnd_toStartOf="@+id/circle_view_opacity1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_shape" />
+
+        <com.example.drawandpaint.widget.CircleView
+            android:id="@+id/circle_view_opacity1"
+            android:layout_width="56dp"
+            android:layout_height="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_shape" />
+
+        <include
+            android:id="@+id/draw_color_palette1"
+            layout="@layout/color_palette_view"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_shape" />
+
+        <include
+            android:id="@+id/draw_shape_palette1"
+            layout="@layout/shape_palette_view"
+            android:layout_width="0dp"
+            android:layout_height="80dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image_shape" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

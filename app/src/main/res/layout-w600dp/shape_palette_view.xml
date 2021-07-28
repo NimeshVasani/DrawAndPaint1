@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/image_circle"
+        android:layout_width="68dp"
+        android:layout_height="match_parent"
+        android:paddingStart="12dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="16dp"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:src="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/image_rectangle"
+        android:layout_width="68dp"
+        android:layout_height="match_parent"
+        android:paddingStart="12dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="16dp"
+        android:src="@drawable/square" />
+
+    <ImageView
+        android:id="@+id/image_line"
+        android:layout_width="68dp"
+        android:layout_height="match_parent"
+        android:paddingStart="12dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="16dp"
+        android:src="@drawable/line" />
+
+    <ImageView
+        android:id="@+id/image_triangle"
+        android:layout_width="68dp"
+        android:layout_height="match_parent"
+        android:paddingStart="12dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="16dp"
+        android:src="@drawable/triangle" />
+
+    <ImageView
+        android:id="@+id/image_hexagon"
+        android:layout_width="68dp"
+        android:layout_height="match_parent"
+        android:paddingStart="12dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="16dp"
+        android:src="@drawable/hexagon" />
+
+    <ImageView
+        android:id="@+id/image_oval"
+        android:layout_width="68dp"
+        android:layout_height="match_parent"
+        android:paddingStart="12dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="16dp"
+        android:src="@drawable/oval" />
+
+    <ImageView
+        android:id="@+id/image_brushes"
+        android:layout_width="68dp"
+        android:layout_height="match_parent"
+        android:paddingStart="12dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="16dp"
+        android:src="@drawable/brush" />
+</LinearLayout>
